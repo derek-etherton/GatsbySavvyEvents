@@ -5,12 +5,20 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `29wz5qj1kpyq`,
+        accessToken: `B1HCOGgGduWo-Hfa1mSX1KXNBtcZ0sMolko61hzdQlc`,
       },
     },
     `gatsby-transformer-sharp`,
